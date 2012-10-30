@@ -1,6 +1,7 @@
 {
   "name": "mydb-tail",
   "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "oplog": "git+ssh://git@github.com:LearnBoost/oplog.git#master",
     "redis": "0.7.3",

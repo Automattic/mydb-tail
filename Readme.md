@@ -21,3 +21,4 @@ require('tail')({
   - `mongo` mongo uri or instance pointing to the `local` database to tail
   - `redis` redis uri or instance
   - `ns` optionally, namespace to filter by (eg: `cloudup.*`)
+  - `query` query to tail from

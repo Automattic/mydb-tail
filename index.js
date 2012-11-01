@@ -26,6 +26,8 @@ function Tailer(opts){
   this.oplog = oplog(opts.mongo);
   this.redis = opts.redis;
 
+  if (opts.query) this.oplog.query(opts.query);
+
   if ('object' != typeof this.redis) {
     var uri = parse(this.redis || 'localhost:6379');
     this.redis = redis(uri.port, uri.host);

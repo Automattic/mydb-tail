@@ -23,7 +23,13 @@ describe('mydb-tail', function(){
 
       redis.subscribe(id, function(err){
         if (err) return done(err);
-        woot.update({ a: 'b' }, { $set: { a: new Date } });
+        woot.update({ a: 'b' }, {
+          $set: {
+            a: new Date,
+            b: 'c',
+            c: 'd'
+          }
+        });
       });
 
       redis.on('message', function(channel, msg){
@@ -31,6 +37,8 @@ describe('mydb-tail', function(){
         var obj = JSON.parse(msg);
         expect(obj[0]).to.eql({});
         expect(obj[1].$set.a.$date).to.be.a('string');
+        expect(obj[1].$set.b).to.be('c');
+        expect(obj[1].$set.c).to.be('d');
         done();
       });
     });

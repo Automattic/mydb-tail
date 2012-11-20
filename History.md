@@ -1,4 +1,12 @@
 
+0.2.2 / 2012-11-20
+==================
+
+  * package: bump `oplog` to avoid crashes
+  * test: added failing test in 2.2.1
+  * Readme: document `query`
+  * index: accept `query` option
+
 0.2.1 / 2012-10-30
 ==================
 

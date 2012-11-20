@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "private": true,
   "dependencies": {
-    "oplog": "git+ssh://git@github.com:LearnBoost/oplog.git#0.2.1",
+    "oplog": "git+ssh://git@github.com:LearnBoost/oplog.git#0.2.2",
     "redis": "0.7.3",
     "monk": "0.6.0",
     "type-component": "*",
